@@ -8,15 +8,15 @@ ARG DEBIAN_FRONTEND=noninteractive
 #RUN apt - get install -y git
 #RUN apt - get install -y curl
 
-RUN apt - get update && \
-    apt - get install -y \
+RUN apt-get update && \
+    apt-get install -y \
     python3 python3-pip \
     git curl && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /shiro_DOCK
 
-RUN git clone shiro_git
+RUN git clone https://github.com/shiroZEROX/sd-docker.git
 
 CMD ["sleep", "infinity"]
 
